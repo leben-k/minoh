@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://leben-k.github.io/minoh/chizu.html">
+<title>観光マップ・位置関係｜みのお往来 - 大阪府箕面市 観光情報サイト</title>
+<meta name="description" content="箕面市の観光地と駅の位置関係がわかる地図ページ。国土地理院の地図を使ったインタラクティブ地図、縮尺どおりの位置関係図、滝道の順路図、エリア別スポット一覧（地図リンク付き）を掲載。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="favicon.svg" alt="" width="40" height="40">
+      <span><span class="brand-name">みのお往来</span><span class="brand-sub">大阪府箕面市 観光・交通・産業ガイド（非公式）</span></span>
+    </a>
+    <nav class="main-nav" aria-label="サイト内メニュー">
+      <a href="index.html">トップ</a>
+      <a href="kotsu.html">駅・交通</a>
+      <a href="areas.html">エリア紹介</a>
+      <a href="chizu.html" class="active" aria-current="page">観光マップ</a>
+      <a href="sangyo.html">産業・農業</a>
+      <a href="matsuri.html">祭り・レジャー</a>
+      <a href="shukuhaku.html">宿泊</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero slim">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">どこにあって、どう行くか</span>
+      <h1><span class="nb">箕面の観光地と駅の</span><br><span class="nb">位置関係マップ。</span></h1>
+      <p>滝道の見どころは阪急箕面駅から北へ、勝尾寺は市の東側の山の上、新しい北急の駅は市の南部にあります。地図・縮尺どおりの位置関係図・滝道の順路図・エリア別の一覧で、行き方をイメージしてからお出かけください。</p>
+      <a href="#map" class="btn">地図をひらく</a>
+      <a href="#list" class="btn btn-outline">スポット一覧へ</a>
+    </div>
+    <div class="hero-art"><img src="img/visitor.svg" alt="山並みと道案内の看板のイラスト" width="320" height="200"></div>
+  </div>
+</section>
+
+<section class="section" id="map">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Interactive Map</span>
+      <h2>地図で見る（拡大・移動できます）</h2>
+      <p>背景は国土地理院の地図です。印（●）は、位置を出典で確認できた駅と主な観光地です。印をタップすると説明が出ます。そのほかの寺社や施設は、地図上の地名表示か、下の一覧の「地図で見る」で確認できます。</p>
+    </div>
+    <div id="leaflet-map" class="lmap" role="region" aria-label="箕面市の地図"></div>
+    <div class="map-legend">
+      <span><i style="background:#6B1F2A"></i>阪急</span>
+      <span><i style="background:#C8243B"></i>北大阪急行</span>
+      <span><i style="background:#2B6E78"></i>大阪モノレール</span>
+      <span><i style="background:#B7352B;border-radius:4px"></i>観光地</span>
+    </div>
+    <p class="map-note">地図データ：国土地理院「地理院タイル」。地図が表示されない場合は、下の位置関係図をご覧ください。</p>
+  </div>
+</section>
+
+<section class="section bg-mist">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Overview</span>
+      <h2>縮尺どおりの位置関係図（北が上）</h2>
+      <p>駅と観光地の緯度・経度から作図した図です。距離の感覚をつかむのに使えます。駅どうしを結ぶ線は直線で描いており、実際の線路の形とは異なります。</p>
+    </div>
+    <div class="routemap">
+<svg viewBox="0 0 900 728" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pmT pmD" font-family="'Noto Sans JP',sans-serif">
+<title id="pmT">箕面市の主な駅と観光地の位置関係図</title>
+<desc id="pmD">緯度経度から縮尺どおりに作図した図。北が上。</desc>
+<rect width="900" height="728" fill="#F7FAF6"/>
+<path d="M90 0 V728" stroke="#E3EAE3"/>
+<path d="M180 0 V728" stroke="#E3EAE3"/>
+<path d="M270 0 V728" stroke="#E3EAE3"/>
+<path d="M360 0 V728" stroke="#E3EAE3"/>
+<path d="M450 0 V728" stroke="#E3EAE3"/>
+<path d="M540 0 V728" stroke="#E3EAE3"/>
+<path d="M630 0 V728" stroke="#E3EAE3"/>
+<path d="M720 0 V728" stroke="#E3EAE3"/>
+<path d="M810 0 V728" stroke="#E3EAE3"/>
+<path d="M82.1 661.5 L213.7 571.4 L257.8 501.5 L280.0 379.1" stroke="#6B1F2A" stroke-width="6" fill="none" stroke-linecap="round" />
+<path d="M511.2 657.3 L469.7 526.0 L460.1 414.7" stroke="#C8243B" stroke-width="6" fill="none" stroke-linecap="round" />
+<path d="M785.6 383.7 L752.3 163.5" stroke="#2B6E78" stroke-width="5" fill="none" stroke-linecap="round" />
+<path d="M280.0 379.1 L308.7 180.4" stroke="#B7352B" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="5 6"/>
+<path d="M460.1 414.7 L476.9 54.5" stroke="#F08A24" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="3 7"/>
+<path d="M650.0 539.1 L476.9 54.5" stroke="#F08A24" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="3 7"/>
+<circle cx="280.0" cy="379.1" r="8" fill="#fff" stroke="#6B1F2A" stroke-width="4"/>
+<text x="268.0" y="365.1" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="end">箕面</text>
+<circle cx="257.8" cy="501.5" r="8" fill="#fff" stroke="#6B1F2A" stroke-width="4"/>
+<text x="245.8" y="506.5" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="end">牧落</text>
+<circle cx="213.7" cy="571.4" r="8" fill="#fff" stroke="#6B1F2A" stroke-width="4"/>
+<text x="201.7" y="576.4" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="end">桜井</text>
+<circle cx="82.1" cy="661.5" r="8" fill="#fff" stroke="#A0606A" stroke-width="4"/>
+<text x="94.1" y="679.5" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">石橋阪大前（池田市）</text>
+<circle cx="460.1" cy="414.7" r="8" fill="#fff" stroke="#C8243B" stroke-width="4"/>
+<text x="474.1" y="408.7" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">箕面萱野</text>
+<circle cx="469.7" cy="526.0" r="8" fill="#fff" stroke="#C8243B" stroke-width="4"/>
+<text x="483.7" y="532.0" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">箕面船場阪大前</text>
+<circle cx="511.2" cy="657.3" r="8" fill="#fff" stroke="#D9707F" stroke-width="4"/>
+<text x="525.2" y="673.3" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">千里中央（豊中市）</text>
+<circle cx="650.0" cy="539.1" r="8" fill="#fff" stroke="#A0606A" stroke-width="4"/>
+<text x="662.0" y="557.1" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">北千里（吹田市）</text>
+<circle cx="785.6" cy="383.7" r="8" fill="#fff" stroke="#2B6E78" stroke-width="4"/>
+<text x="797.6" y="388.7" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">豊川（茨木市）</text>
+<circle cx="752.3" cy="163.5" r="8" fill="#fff" stroke="#2B6E78" stroke-width="4"/>
+<text x="764.3" y="168.5" font-size="14" font-weight="700" fill="#1E2A24" text-anchor="start">彩都西（茨木市）</text>
+<circle cx="308.7" cy="180.4" r="11" fill="#B7352B" stroke="#fff" stroke-width="3"/><path d="M304.7 183.4 L308.7 175.4 L312.7 183.4Z" fill="#fff"/>
+<text x="322.7" y="176.4" font-size="17" font-weight="700" fill="#7E1F1B" text-anchor="start">箕面大滝</text>
+<circle cx="476.9" cy="54.5" r="11" fill="#B7352B" stroke="#fff" stroke-width="3"/><path d="M472.9 57.5 L476.9 49.5 L480.9 57.5Z" fill="#fff"/>
+<text x="490.9" y="50.5" font-size="17" font-weight="700" fill="#7E1F1B" text-anchor="start">勝尾寺</text>
+<text x="302" y="279" font-size="12" fill="#B7352B">滝道 約2.7km</text>
+<text x="554" y="211" font-size="12" fill="#B85E00">阪急バス（経路は省略）</text>
+<text x="749" y="288" font-size="11" fill="#2B6E78" text-anchor="end">大阪モノレール彩都線</text>
+<g transform="translate(715 698)"><rect x="-8" y="-24" width="165" height="42" rx="8" fill="#fff" opacity=".9"/><path d="M0 0 H94.7" stroke="#1E2A24" stroke-width="4"/><path d="M0 -6 V6 M94.7 -6 V6" stroke="#1E2A24" stroke-width="2"/><text x="103" y="5" font-size="13" fill="#1E2A24">1km</text></g>
+<g transform="translate(860 44)"><path d="M0 -24 L10 6 L0 0 L-10 6Z" fill="#1E2A24"/><text y="24" font-size="14" font-weight="700" text-anchor="middle" fill="#1E2A24">N</text></g>
+</svg>
+    </div>
+    <p class="map-note">※ 点線（オレンジ）は勝尾寺へ向かう阪急バスがあることを示すもので、実際の道路の経路ではありません。バス系統は2026年9月確認時点のもので、変更されることがあります。</p>
+  </div>
+</section>
+
+<section class="section bg-warm">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Takimichi</span>
+      <h2>滝道の順路図（箕面駅から）</h2>
+      <p>箕面駅から箕面大滝まで、箕面川に沿って歩く約2.7kmの遊歩道です。距離は箕面駅からのおおよその道のりです。沿道には橋本亭、唐人戻岩、野口英世像などの見どころもあります。公園内の滝道は一般車両が通行できません。</p>
+    </div>
+    <div class="routemap">
+<svg viewBox="0 0 880 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tmT" font-family="'Noto Sans JP',sans-serif"><title id="tmT">滝道の順路図（箕面駅からの距離）</title>
+<rect width="880" height="150" rx="14" fill="#FBF1E4"/>
+<path d="M40 70 H840" stroke="#D9C6A5" stroke-width="14" stroke-linecap="round"/>
+<path d="M40 70 H840" stroke="#7FC4CC" stroke-width="3" stroke-dasharray="2 6"/>
+<circle cx="40" cy="70" r="10" fill="#1F4F4B" stroke="#fff" stroke-width="3"/>
+<text x="40" y="24" font-size="15" font-weight="700" fill="#1E2A24" text-anchor="start">箕面駅</text>
+<text x="40" y="40" font-size="12" fill="#4A5A52" text-anchor="start">出発点（交通・観光案内所）</text>
+<circle cx="277" cy="70" r="10" fill="#1F4F4B" stroke="#fff" stroke-width="3"/>
+<text x="277" y="108" font-size="15" font-weight="700" fill="#1E2A24" text-anchor="middle">箕面公園昆虫館</text>
+<text x="277" y="126" font-size="12" fill="#4A5A52" text-anchor="middle">約800m</text>
+<circle cx="336" cy="70" r="10" fill="#1F4F4B" stroke="#fff" stroke-width="3"/>
+<text x="336" y="24" font-size="15" font-weight="700" fill="#1E2A24" text-anchor="middle">瀧安寺</text>
+<text x="336" y="40" font-size="12" fill="#4A5A52" text-anchor="middle">約1km</text>
+<circle cx="840" cy="70" r="10" fill="#B7352B" stroke="#fff" stroke-width="3"/>
+<text x="840" y="108" font-size="15" font-weight="700" fill="#1E2A24" text-anchor="end">箕面大滝</text>
+<text x="840" y="126" font-size="12" fill="#4A5A52" text-anchor="end">約2.7km・徒歩約40分</text>
+</svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="list">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Spots by Area</span>
+      <h2>エリア別スポット一覧と行き方</h2>
+      <p>「地図で見る」を押すと、Googleマップでその場所を検索して表示します。エリアの分け方は箕面市観光協会の区分にならっています。</p>
+    </div>
+    <div class="sp-grid">
+      <div class="sp-area" style="--ac:#B7352B">
+        <h3>箕面・滝道</h3>
+        <ul class="sp-list"><li><span class="sp-name">箕面 交通・観光案内所</span><span class="sp-info">阪急箕面駅前（箕面市箕面1-1-1）</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%20%E4%BA%A4%E9%80%9A%E3%83%BB%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80%20%E7%AE%95%E9%9D%A2%E5%B8%82%E7%AE%95%E9%9D%A21-1-1" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面公園昆虫館</span><span class="sp-info">箕面駅から滝道で約800m（箕面市箕面公園1-18）</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E5%85%AC%E5%9C%92%E6%98%86%E8%99%AB%E9%A4%A8" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面山 瀧安寺</span><span class="sp-info">箕面駅から滝道で約1km（箕面市箕面公園2-23）</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%80%A7%E5%AE%89%E5%AF%BA%20%E7%AE%95%E9%9D%A2%E5%B8%82%E7%AE%95%E9%9D%A2%E5%85%AC%E5%9C%922-23" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面大滝</span><span class="sp-info">箕面駅から滝道で約2.7km・徒歩約40分</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E5%A4%A7%E6%BB%9D" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">聖天宮 西江寺</span><span class="sp-info">滝道エリア</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E8%81%96%E5%A4%A9%E5%AE%AE%20%E8%A5%BF%E6%B1%9F%E5%AF%BA%20%E7%AE%95%E9%9D%A2%E5%B8%82" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面ビジターセンター</span><span class="sp-info">政ノ茶屋園地。東海自然歩道の西の起点</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面川ダム</span><span class="sp-info">付近に駐車場はありません</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E5%B7%9D%E3%83%80%E3%83%A0" target="_blank" rel="noopener noreferrer">地図で見る</a></li></ul>
+      </div>
+      <div class="sp-area" style="--ac:#E0762F">
+        <h3>粟生・小野原</h3>
+        <ul class="sp-list"><li><span class="sp-name">勝尾寺</span><span class="sp-info">箕面萱野駅から阪急バス30系統（直行）で約20分／北千里駅から29系統</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E5%8B%9D%E5%B0%BE%E5%AF%BA%20%E7%AE%95%E9%9D%A2%E5%B8%82%E7%B2%9F%E7%94%9F%E9%96%93%E8%B0%B72914-1" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">勝尾寺大鳥居</span><span class="sp-info">西国街道沿い。勝尾寺の表参道の起点で、勝尾寺まで約4km</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E5%8B%9D%E5%B0%BE%E5%AF%BA%20%E5%A4%A7%E9%B3%A5%E5%B1%85%20%E7%AE%95%E9%9D%A2%E5%B8%82" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">帝釈寺</span><span class="sp-info">三天を祀る寺。春は桜の名所</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E5%B8%9D%E9%87%88%E5%AF%BA%20%E7%AE%95%E9%9D%A2%E5%B8%82" target="_blank" rel="noopener noreferrer">地図で見る</a></li></ul>
+      </div>
+      <div class="sp-area" style="--ac:#C8243B">
+        <h3>箕面萱野駅周辺</h3>
+        <ul class="sp-list"><li><span class="sp-name">みのおキューズモール</span><span class="sp-info">箕面萱野駅の北改札から直結</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E3%81%BF%E3%81%AE%E3%81%8A%E3%82%AD%E3%83%A5%E3%83%BC%E3%82%BA%E3%83%A2%E3%83%BC%E3%83%AB" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">萱野三平記念館 涓泉亭</span><span class="sp-info">西国街道沿い</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E8%90%B1%E9%87%8E%E4%B8%89%E5%B9%B3%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E6%B6%93%E6%B3%89%E4%BA%AD" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面市立郷土資料館</span><span class="sp-info">市役所第二別館（箕面市船場西3-8-22）</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E5%B8%82%E7%AB%8B%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8%20%E7%AE%95%E9%9D%A2%E5%B8%82%E8%88%B9%E5%A0%B4%E8%A5%BF3-8-22" target="_blank" rel="noopener noreferrer">地図で見る</a></li></ul>
+      </div>
+      <div class="sp-area" style="--ac:#7E4E9A">
+        <h3>箕面船場阪大前駅周辺</h3>
+        <ul class="sp-list"><li><span class="sp-name">大阪大学 箕面キャンパス</span><span class="sp-info">箕面船場阪大前駅の東側</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%A4%A7%E5%AD%A6%20%E7%AE%95%E9%9D%A2%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面市立文化芸能劇場</span><span class="sp-info">箕面船場阪大前駅の東側</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E5%B8%82%E7%AB%8B%E6%96%87%E5%8C%96%E8%8A%B8%E8%83%BD%E5%8A%87%E5%A0%B4" target="_blank" rel="noopener noreferrer">地図で見る</a></li></ul>
+      </div>
+      <div class="sp-area" style="--ac:#6B1F2A">
+        <h3>桜井・牧落</h3>
+        <ul class="sp-list"><li><span class="sp-name">箕面ビール（本社・直営店）</span><span class="sp-info">牧落駅から徒歩約12分</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E3%83%93%E3%83%BC%E3%83%AB%20%E7%AE%95%E9%9D%A2%E5%B8%82%E7%89%A7%E8%90%BD3%E4%B8%81%E7%9B%AE" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面西公園</span><span class="sp-info">箕面川沿いの親水公園</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E8%A5%BF%E5%85%AC%E5%9C%92" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">阪急桜井市場</span><span class="sp-info">桜井駅の近く</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%E6%A1%9C%E4%BA%95%E5%B8%82%E5%A0%B4" target="_blank" rel="noopener noreferrer">地図で見る</a></li></ul>
+      </div>
+      <div class="sp-area" style="--ac:#3D6B3F">
+        <h3>止々呂美</h3>
+        <ul class="sp-list"><li><span class="sp-name">止々呂美ふるさと自然館</span><span class="sp-info">市の北部。キャンプフィールドあり</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E6%AD%A2%E3%80%85%E5%91%82%E7%BE%8E%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E8%87%AA%E7%84%B6%E9%A4%A8" target="_blank" rel="noopener noreferrer">地図で見る</a></li><li><span class="sp-name">箕面とどろみIC</span><span class="sp-info">新名神高速道路</span><a class="sp-link" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%95%E9%9D%A2%E3%81%A8%E3%81%A9%E3%82%8D%E3%81%BF%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B3%E3%82%B8" target="_blank" rel="noopener noreferrer">地図で見る</a></li></ul>
+      </div>
+    </div>
+    <p class="bus-notice"><strong>ご注意：</strong>バスの系統・所要時間は2026年9月時点で確認した内容です。ルートや系統は変更されることがありますので、ご利用の際は必ず阪急バス・箕面市の公式サイトで最新の情報をご確認ください。</p>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('leaflet-map');
+  if(!window.L||!el){ if(el) el.innerHTML='<p style="padding:20px">地図を読み込めませんでした。下の位置関係図をご覧ください。</p>'; return; }
+  var map=L.map(el,{scrollWheelZoom:false}).setView([34.838,135.485],13);
+  L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',{
+    maxZoom:18,attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>'
+  }).addTo(map);
+  var col={hk:'#6B1F2A',hk2:'#A0606A',kq:'#C8243B',kq2:'#D9707F',mo:'#2B6E78',spot:'#B7352B'};
+  var pts=[{"n": "箕面駅", "lat": 34.8350417, "lon": 135.4683611, "k": "hk", "t": "阪急箕面線の終点。滝道の入口"}, {"n": "牧落駅", "lat": 34.823436, "lon": 135.46579, "k": "hk", "t": "阪急箕面線。市役所の最寄り"}, {"n": "桜井駅", "lat": 34.816801, "lon": 135.4607, "k": "hk", "t": "阪急箕面線"}, {"n": "石橋阪大前駅", "lat": 34.808254, "lon": 135.445487, "k": "hk2", "t": "池田市。宝塚線と箕面線の接続駅"}, {"n": "箕面萱野駅", "lat": 34.83167, "lon": 135.48917, "k": "kq", "t": "北急の終点。キューズモール直結、バスターミナル"}, {"n": "箕面船場阪大前駅", "lat": 34.82111, "lon": 135.49028, "k": "kq", "t": "北急。大阪大学・文化芸能劇場の最寄り"}, {"n": "千里中央駅", "lat": 34.808655, "lon": 135.495067, "k": "kq2", "t": "豊中市。北急・大阪モノレール"}, {"n": "北千里駅", "lat": 34.81987, "lon": 135.51111, "k": "hk2", "t": "吹田市。阪急千里線の終点"}, {"n": "豊川駅", "lat": 34.834611, "lon": 135.526778, "k": "mo", "t": "茨木市。大阪モノレール彩都線"}, {"n": "彩都西駅", "lat": 34.855492, "lon": 135.522931, "k": "mo", "t": "茨木市。大阪モノレール彩都線"}, {"n": "箕面大滝", "lat": 34.85389, "lon": 135.47167, "k": "spot", "t": "落差33m。日本の滝百選"}, {"n": "勝尾寺", "lat": 34.86583, "lon": 135.49111, "k": "spot", "t": "西国三十三所第23番札所。勝ちダルマの寺"}];
+  var b=[];
+  pts.forEach(function(p){
+    var s=p.k==='spot';
+    var icon=L.divIcon({className:'',iconSize:s?[26,26]:[18,18],iconAnchor:s?[13,13]:[9,9],
+      html:'<span class="pin'+(s?' pin-spot':'')+'" style="--c:'+col[p.k]+'"></span>'});
+    L.marker([p.lat,p.lon],{icon:icon,title:p.n}).addTo(map)
+     .bindTooltip(p.n,{permanent:true,direction:(p.n==='北千里駅'?'bottom':'right'),offset:(p.n==='北千里駅'?[0,8]:[10,0]),className:'pin-label'+(s?' pin-label-spot':'')})
+     .bindPopup('<strong>'+p.n+'</strong><br>'+p.t);
+    b.push([p.lat,p.lon]);
+  });
+  map.fitBounds(b,{padding:[30,30]});
+})();
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>みのお往来について</h4>
+        <p>大阪府箕面市の観光地・駅と交通・産業・祭り・宿泊の情報を、個人の視点でまとめた非公式の情報サイトです。掲載内容は公開情報をもとに作成しており、出典で確認できなかった事柄は記載していません。最新情報は各施設・事業者・自治体の公式情報をご確認ください。</p>
+      </div>
+      <div>
+        <h4>サイト内リンク</h4>
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="kotsu.html">駅・交通</a></li>
+          <li><a href="areas.html">エリア紹介</a></li>
+          <li><a href="chizu.html">観光マップ</a></li>
+          <li><a href="sangyo.html">産業・農業</a></li>
+          <li><a href="matsuri.html">祭り・レジャー</a></li>
+          <li><a href="shukuhaku.html">宿泊</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>運営者情報</h4>
+        <p>サイトの運営者情報・連絡先フォームは専用ページに掲載しています。</p>
+        <ul><li><a href="unei.html">運営者情報・連絡先</a></li></ul>
+      </div>
+    </div>
+    <div class="sources"><strong>主な参照元（2026年9月確認）</strong><br>箕面市公式サイト（統計・交通・ボートレース事業概要ほか）／箕面市観光協会「Touch Minoh」／府営箕面公園 公式サイト／北大阪急行電鉄 延伸特設サイト／阪急電鉄・阪急バス／西日本高速道路（NEXCO西日本）／GENSEN HOLDINGS株式会社 プレスリリース（2026年7月1日）／株式会社箕面ビール 会社情報／勝尾寺 公式サイト／各駅・路線・施設のWikipedia記事（出典記載のある情報に限り参照）</div>
+    <div class="disclaimer">
+      当サイトはアフィリエイト（広告）を掲載しており、掲載する広告・リンクを経由した商品購入等によって収益を得る場合があります。広告掲載商品の内容、品質、価格、在庫状況、取引条件等については各広告主・販売元の情報をご確認ください。広告のご利用によって生じたいかなる損害・不利益についても、当サイト運営者は一切の責任を負いかねますので、あらかじめご了承ください。また、当サイトに掲載する観光・交通・産業・施設情報は作成時点のものであり、内容の正確性・最新性を保証するものではありません。運行ルートや営業状況は変更される場合がありますので、実際のご利用の際は各施設・事業者・自治体の公式情報を必ずご確認ください。掲載しているイラストはすべて当サイトのオリジナルで、実際の風景・車両・建物を正確に再現したものではありません。
+    </div>
+    <div class="disclaimer" style="margin-top:14px;">
+      <strong style="color:#fff;">プライバシーポリシー</strong><br>
+      当サイトが独自に取得・保存する個人情報はありません。「<a href="unei.html">運営者情報・連絡先</a>」ページのフォームからお送りいただいた内容（メールアドレス・お名前・連絡内容）は、フォーム送信サービス「Formspree」を経由して運営者宛のメールに転送されます。送信の際、IPアドレスやブラウザの種類等の情報がFormspree社によって取得される場合があります。詳細は<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>をご確認ください。恐れ入りますが、パスワードやマイナンバーなど機微な情報の送信はお控えください。また、当サイトはWebフォント表示のためGoogle Fonts等の外部サービスに接続しており、その際にアクセス情報が当該サービスに送信される場合があります。加えて、当サイトに掲載するアフィリエイト（広告）のリンクを経由した場合、各広告サービス・提供元によってクッキー等を用いたアクセス情報の取得が行われることがあります。詳細は各サービスが公開するプライバシーポリシーをご確認ください。本ポリシーの内容は、必要に応じて予告なく変更することがあります。
+    </div>
+    <div class="copyright"><span id="copyright-text">© 2026 みのお往来</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var startYear = 2026;
+  var currentYear = new Date().getFullYear();
+  var yearText = currentYear > startYear ? (startYear + '-' + currentYear) : String(startYear);
+  var el = document.getElementById('copyright-text');
+  if (el) { el.textContent = '\u00A9 ' + yearText + ' みのお往来'; }
+})();
+</script>
+</body>
+</html>
