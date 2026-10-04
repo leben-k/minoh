@@ -114,11 +114,11 @@
 
     </div>
     <!-- ふるさと納税広告枠 -->
-    <div class="furusato-block">
+    <div class="furusato-block" hidden>
       <span class="furusato-label">ふるさと納税で箕面の産品を取り寄せる</span>
       <div class="furusato-grid">
         <!-- ふるさと納税アフィリエイト広告4 ここに挿入 -->
-        <div class="furusato-slot"><span class="slot-title">返礼品広告枠 4</span><span>【楽天アフィリエイト掲載予定】</span></div>
+        <div class="furusato-slot" data-ad-slot="furusato4" hidden><span class="ad-label">広告</span><div class="ad-body"></div></div>
       </div>
     </div>
   </div>
@@ -167,11 +167,11 @@
 
     </div>
     <!-- ふるさと納税広告枠 -->
-    <div class="furusato-block">
+    <div class="furusato-block" hidden>
       <span class="furusato-label">ふるさと納税で箕面のゆず・山椒を味わう</span>
       <div class="furusato-grid">
         <!-- ふるさと納税アフィリエイト広告5 ここに挿入 -->
-        <div class="furusato-slot"><span class="slot-title">返礼品広告枠 5</span><span>【楽天アフィリエイト掲載予定】</span></div>
+        <div class="furusato-slot" data-ad-slot="furusato5" hidden><span class="ad-label">広告</span><div class="ad-body"></div></div>
       </div>
     </div>
   </div>
@@ -223,5 +223,6 @@
   if (el) { el.textContent = '\u00A9 ' + yearText + ' みのお往来'; }
 })();
 </script>
+<script src="ads.js" defer></script>
 </body>
 </html>
